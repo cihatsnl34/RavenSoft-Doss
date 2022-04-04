@@ -20,9 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+
 
 Route::get('/admin', function () {
     return redirect('/admin/login');
@@ -39,18 +37,20 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         
         Route::get('dashboard', 'HomeController@index')->name('dashboard');
-
-        Route::get('botlar', function () {
-            return view('admin.pages.botlar');
-        })->name('botlar');
-        Route::get('uyeler', function () {
-            return view('admin.pages.uyeler');
+        Route::get('reference', 'ReferanceController@index')->name('reference');
+        Route::post('reference/add', 'ReferanceController@create')->name('reference_add');
+        Route::get('reference/add', 'ReferanceController@store')->name('reference_add');
+        Route::get('about', function () {
+            return view('admin.About.about');
+        })->name('about');
+        Route::get('references', function () {
+            return view('admin.dashboard');
         })->name('uyeler');
-        Route::get('ihaleler', function () {
-            return view('admin.pages.ihaleler');
-        })->name('ihaleler');
+        Route::get('resource', function () {
+            return view('admin.resource');
+        })->name('resource');
         Route::get('teklifler', function () {
-            return view('admin.pages.teklifler');
+            return view('admin.pages.teklifle');
         })->name('teklifler');
         Route::get('acik-arttirma', function () {
             return view('admin.pages.acik-art');

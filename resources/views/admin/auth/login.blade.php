@@ -14,7 +14,7 @@
                         <div class="mb-5 invisible" data-toggle="appear" data-class="animated fadeInDown">
                             <i class="fa fa-id-card fa-3x text-primary"></i>
                             <h2 class="h3 font-w400 text-white-50 invisible" data-toggle="appear" data-class="animated fadeInDown" data-timeout="300">
-                                Oto İhale Sistemi
+                                Raven Soft
                             </h2>
                             <h4 class="text-white invisible" data-toggle="appear" data-class="animated fadeInDown">
                                 Admin <span class="font-w300">panel</span>

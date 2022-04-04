@@ -151,7 +151,7 @@
             <a class="font-w600 text-dual" href="index.html">
 
                 <span class="smini-hide">
-                    <span class="font-w700 font-size-h5">OİS |</span> <span class="font-w400">{{session('username')}}</span>
+                    <span class="font-w700 font-size-h5">RavenSoft |</span> <span class="font-w400">{{session('username')}}</span>
                 </span>
             </a>
             <!-- END Logo -->
@@ -218,51 +218,15 @@
                 <li class="nav-main-heading">İşlemler</li>
 
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link {{ (request()->is('admin/botlar*')) ? 'active' : '' }}" href="{{ route('admin.botlar') }}">
+                    <a class="nav-main-link nav-main-link" href="{{ route('admin.dashboard') }}">
                         <i class="nav-main-link-icon si si-energy"></i>
-                        <span class="nav-main-link-name">Botlar</span>
+                        <span class="nav-main-link-name">About</span>
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link {{ (request()->is('admin/uyeler*')) ? 'active' : '' }}" href="{{ route('admin.uyeler') }}">
+                    <a class="nav-main-link nav-main-link" href="{{ route('admin.dashboard') }}">
                         <i class="nav-main-link-icon si si-users"></i>
-                        <span class="nav-main-link-name">Üyeler</span>
-                    </a>
-                </li>
-                <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link {{ (request()->is('admin/ihaleler*')) ? 'active' : '' }}" href="{{ route('admin.ihaleler') }}">
-                        <i class="nav-main-link-icon fa fa-car"></i>
-                        <span class="nav-main-link-name">İhaleler</span>
-                    </a>
-                </li>
-                <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link {{ (request()->is('admin/teklifler*')) ? 'active' : '' }}" href="{{ route('admin.teklifler') }}">
-                        <i class="nav-main-link-icon si si-fire"></i>
-                        <span class="nav-main-link-name">Teklifler</span>
-                    </a>
-                </li>
-                <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link {{ (request()->is('admin/acik-arttirma*')) ? 'active' : '' }}" href="{{ route('admin.acik-arttirma') }}">
-                        <i class="nav-main-link-icon fa fa-arrow-up"></i>
-                        <span class="nav-main-link-name">Açık Arttırma</span>
-                    </a>
-                </li>
-                <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link {{ (request()->is('admin/kalanlar*')) ? 'active' : '' }}" href="{{ route('admin.kalanlar') }}">
-                        <i class="nav-main-link-icon fa fa-map-pin"></i>
-                        <span class="nav-main-link-name">Kalanlar</span>
-                    </a>
-                </li>
-                <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link {{ (request()->is('admin/kayitlar*')) ? 'active' : '' }}" href="{{ route('admin.kayitlar') }}">
-                        <i class="nav-main-link-icon si si-layers"></i>
-                        <span class="nav-main-link-name">Kayıtlar</span>
-                    </a>
-                </li>
-                <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link {{ (request()->is('admin/ayarlar*')) ? 'active' : '' }}" href="{{ route('admin.ayarlar') }}">
-                        <i class="nav-main-link-icon si si-wrench"></i>
-                        <span class="nav-main-link-name">Ayarlar</span>
+                        <span class="nav-main-link-name">References</span>
                     </a>
                 </li>
                 <li class="nav-main-item">

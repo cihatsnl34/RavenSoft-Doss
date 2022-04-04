@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 04 Nis 2022, 21:16:43
+-- Üretim Zamanı: 04 Nis 2022, 23:12:45
 -- Sunucu sürümü: 10.4.22-MariaDB
--- PHP Sürümü: 8.1.2
+-- PHP Sürümü: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Veritabanı: `db-doss`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `abouts`
+--
+
+CREATE TABLE `abouts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -82,7 +94,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2022_02_18_093949_create_admins_table', 1);
+(5, '2022_02_18_093949_create_admins_table', 1),
+(6, '2022_04_04_195202_create_abouts_table', 2),
+(7, '2022_04_04_204902_create_resources_table', 2),
+(8, '2022_04_04_205306_resource', 2),
+(9, '2022_04_04_210017_create_references_table', 3),
+(10, '2022_04_04_210100_reference', 3);
 
 -- --------------------------------------------------------
 
@@ -117,6 +134,34 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Tablo için tablo yapısı `references`
+--
+
+CREATE TABLE `references` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `CompanyName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CompanyLogo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `resources`
+--
+
+CREATE TABLE `resources` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `CompanyName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CompanyLogo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Tablo için tablo yapısı `users`
 --
 
@@ -134,6 +179,12 @@ CREATE TABLE `users` (
 --
 -- Dökümü yapılmış tablolar için indeksler
 --
+
+--
+-- Tablo için indeksler `abouts`
+--
+ALTER TABLE `abouts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Tablo için indeksler `admins`
@@ -170,6 +221,18 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Tablo için indeksler `references`
+--
+ALTER TABLE `references`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `resources`
+--
+ALTER TABLE `resources`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Tablo için indeksler `users`
 --
 ALTER TABLE `users`
@@ -179,6 +242,12 @@ ALTER TABLE `users`
 --
 -- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
 --
+
+--
+-- Tablo için AUTO_INCREMENT değeri `abouts`
+--
+ALTER TABLE `abouts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `admins`
@@ -196,12 +265,24 @@ ALTER TABLE `failed_jobs`
 -- Tablo için AUTO_INCREMENT değeri `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `references`
+--
+ALTER TABLE `references`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `resources`
+--
+ALTER TABLE `resources`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --

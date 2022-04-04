@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosya Fabrikası</title>
+    <link rel="icon" href="./assets/logo.svg" type="image/icon type">
+    <!----IMPORT SWIPER--->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!----IMPORT GLOBAL.CSS--->
+    <link rel="stylesheet" href="./css/global.css">
+    <!----IMPORT TAILWIND--->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!----IMPORT FONTAWESOME--->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!------BANNER----->
+    <div class="w-full h-7 bg-[url('./assets/topbar-bg.png')] flex flex-row justify-center items-center p-0.5 ">
+        <img class="h-2/3 px-3" src="./assets/emoji.png" />
+        <span class="font-poppins text-sm text-white"> Hızlı sipariş hattımız WhatsApp : 0532 000 00 00</span>
+    </div>
+    <!-----HEADER------>
+    <section class="relative bg-white overflow-hidden shadow-lg z-50 ">
+        <div class="bg-transparent">
+            <nav class="flex justify-between p-5 px-4">
+                <div class="flex justify-between items-center w-full">
+                    <div class="w-1/2 xl:w-1/3">
+                        <a class="block max-w-max" href="index.html">
+                            <img src="./assets/logo.svg" />
+                        </a>
+                    </div>
+                    <div class="w-1/2 xl:w-1/3">
+                        <ul class="hidden xl:flex xl:justify-center xl:items-center">
+                            <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
+                                    href="index.html">Anasayfa</a></li>
+                            <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
+                                    href="hakkimizda.html">Hakkımızda</a></li>
+                            <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
+                                    href="iletisim.html">İletişim</a></li>
+                            <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
+                                    href="#">Karton Çanta</a></li>
+                            <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
+                                    href="#">Etiket</a></li>
+                            <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
+                                    href="#">Karton Kutu</a></li>
+                            <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
+                                    href="#">Online Satış Kutusu</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2 xl:w-1/3">
+                        <div class="hidden xl:flex items-center justify-end"><a
+                                class="bg-transparent rounded-full text-green-500 border-green-500 border-2 text-xs py-3 px-8 "
+                                href="#">SİPARİŞ VER</a></div>
+                    </div>
+                </div>
+                <button class="navbar-burger self-center xl:hidden" onclick="openMenu()">
+                    <i class="ri-menu-line text-xl"></i>
+                </button>
+            </nav>
+            <div style="display: none;" id="nav-menu"
+                class="navbar-menu fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
+                <div class="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
+                    <nav class="relative p-6 h-full overflow-y-auto">
+                        <div class="flex flex-col justify-between h-full">
+                            <a class="inline-block" href="#">
+                                <img class="h-8" src="./assets/logo.svg" alt="">
+                            </a>
+                            <ul class="py-6">
+                                <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                        href="index.html">Anasayfa</a></li>
+                                <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                        href="hakkimizda.html">Hakkımızda</a></li>
+                                <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                        href="iletisim.html">İletişim</a></li>
+                                <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                        href="#">Karton Çanta</a></li>
+                                <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                        href="#">Etiket</a></li>
+                                <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                        href="#">Karton Kutu</a></li>
+                                <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
+                                        href="#"> Online Satış Kutusu</a></li>
+                            </ul>
+                            <div class="flex flex-wrap mb-10">
+                                <div class="w-full mb-2"><a
+                                        class="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md"
+                                        href="#">Log In</a></div>
+                                <div class="w-full"><a
+                                        class="inline-block py-2 px-4 w-full text-sm leading-5 text-white bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md"
+                                        href="#">Sign Up</a></div>
+                            </div>
+                        </div>
+                    </nav>
+                    <a class="navbar-close absolute top-5 p-4 right-3" href="#" onclick="closeMenu()">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.94004 6L11.14 1.80667C11.2656 1.68113 11.3361 1.51087 11.3361 1.33333C11.3361 1.1558 11.2656 0.985537 11.14 0.860002C11.0145 0.734466 10.8442 0.66394 10.6667 0.66394C10.4892 0.66394 10.3189 0.734466 10.1934 0.860002L6.00004 5.06L1.80671 0.860002C1.68117 0.734466 1.51091 0.663941 1.33337 0.663941C1.15584 0.663941 0.985576 0.734466 0.860041 0.860002C0.734505 0.985537 0.66398 1.1558 0.66398 1.33333C0.66398 1.51087 0.734505 1.68113 0.860041 1.80667L5.06004 6L0.860041 10.1933C0.797555 10.2553 0.747959 10.329 0.714113 10.4103C0.680267 10.4915 0.662842 10.5787 0.662842 10.6667C0.662842 10.7547 0.680267 10.8418 0.714113 10.9231C0.747959 11.0043 0.797555 11.078 0.860041 11.14C0.922016 11.2025 0.99575 11.2521 1.07699 11.2859C1.15823 11.3198 1.24537 11.3372 1.33337 11.3372C1.42138 11.3372 1.50852 11.3198 1.58976 11.2859C1.671 11.2521 1.74473 11.2025 1.80671 11.14L6.00004 6.94L10.1934 11.14C10.2554 11.2025 10.3291 11.2521 10.4103 11.2859C10.4916 11.3198 10.5787 11.3372 10.6667 11.3372C10.7547 11.3372 10.8419 11.3198 10.9231 11.2859C11.0043 11.2521 11.0781 11.2025 11.14 11.14C11.2025 11.078 11.2521 11.0043 11.286 10.9231C11.3198 10.8418 11.3372 10.7547 11.3372 10.6667C11.3372 10.5787 11.3198 10.4915 11.286 10.4103C11.2521 10.329 11.2025 10.2553 11.14 10.1933L6.94004 6Z"
+                                fill="#556987"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------VIEW---------->
+    <section class="relative py-20">
+        <div class="relative container px-4 mx-auto">
+            <div class="relative flex flex-wrap items-center -mx-4">
+                <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                    <div class="max-w-lg">
+                        <span class="text-xs text-blue-400 font-semibold">What's new at Shuffle</span>
+                        <h2 class="mt-8 mb-6 lg:mb-10 lg:pr-8 text-4xl font-semibold font-heading">Expand your brand
+                            with this excellent extension tool</h2>
+                        <p class="mb-6 lg:mb-12 text-xl text-gray-500">With this tool, you will get much better results
+                            at work and develop new skills. Will you take the risk of trying the latest version of our
+                            application?</p>
+                        <a class="inline-block py-4 px-8 text-sm text-white font-medium leading-normal border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition duration-200 rounded transition duration-200"
+                            href="#">Try demo</a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 px-4">
+                    <img class="rounded-xl lg:max-w-2xl" src="https://shuffle.dev/zeus-assets/images/group-posts.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------VIEW---------->
+    <section class="relative py-20">
+        <img class="hidden lg:block absolute bottom-0 left-0 mb-40" src="zeus-assets/icons/dots/blue-dot-left-bars.svg"
+            alt="">
+        <div class="container px-4 mx-auto">
+            <div class="flex flex-wrap -mx-4">
+                <div class="relative w-full lg:w-1/2 px-4 order-last lg:order-first flex items-center">
+                    <img src="https://shuffle.dev/zeus-assets/images/z-picture.png" alt="">
+                </div>
+                <div class="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
+                    <div class="max-w-xl">
+                        <h2 class="mb-10 lg:mb-16 text-4xl font-semibold font-heading">Lorem ipsum dolor sit amet
+                            consectetur</h2>
+                        <div class="relative flex flex-wrap -mx-4 -mb-12">
+                            <div class="relative w-full lg:w-1/2 px-4 mb-12">
+                                <img class="hidden lg:block absolute top-0 left-0 ml-24 -mt-10"
+                                    src="https://shuffle.dev/zeus-assets/icons/line-little-top.svg" alt="">
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 mb-6 lg:mb-8 rounded-full bg-blue-400 text-white text-sm">1</span>
+                                <h3 class="mb-4 text-2xl font-semibold font-heading">Dolor sit amet</h3>
+                                <p class="text-xl text-gray-500">Etiam pellentesque non nibh non pulvinar. Mauris
+                                    posuere, tellus sit amet tempus vestibulum.</p>
+                            </div>
+                            <div class="w-full lg:w-1/2 px-4 mb-12">
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 mb-6 lg:mb-8 rounded-full bg-red-400 text-white text-sm">2</span>
+                                <h3 class="mb-4 text-2xl font-semibold font-heading">Dolor sit amet</h3>
+                                <p class="text-xl text-gray-500">Etiam pellentesque non nibh non pulvinar. Mauris
+                                    posuere, tellus sit amet tempus vestibulum.</p>
+                            </div>
+                            <div class="relative w-full lg:w-1/2 px-4 mb-12">
+                                <img class="hidden lg:block absolute top-0 left-0 -mt-24 ml-24"
+                                    src="https://shuffle.dev/zeus-assets/icons/line-little.svg" alt="">
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 mb-6 lg:mb-8 rounded-full bg-yellow-400 text-white text-sm">3</span>
+                                <h3 class="mb-4 text-2xl font-semibold font-heading">Dolor sit amet</h3>
+                                <p class="text-xl text-gray-500">Etiam pellentesque non nibh non pulvinar. Mauris
+                                    posuere, tellus sit amet tempus vestibulum.</p>
+                            </div>
+                            <div class="w-full lg:w-1/2 px-4 mb-12">
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 mb-6 lg:mb-8 rounded-full bg-orange-400 text-white text-sm">4</span>
+                                <h3 class="mb-4 text-2xl font-semibold font-heading">Dolor sit amet</h3>
+                                <p class="text-xl text-gray-500">Etiam pellentesque non nibh non pulvinar. Mauris
+                                    posuere, tellus sit amet tempus vestibulum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------VIEW---------->
+    <section class="relative py-20">
+        <div class="container px-4 mx-auto">
+            <div class="relative flex flex-wrap items-center -mx-4">
+                <img class="hidden xl:block absolute top-0 right-0 mt-40 -mr-32"
+                    src="zeus-assets/icons/dots/red-dot-right-shield.svg" alt="">
+                <div class="relative w-full lg:w-1/2 px-4 pb-12 lg:pb-0">
+                    <div class="max-w-max">
+                        <h2 class="mb-10 lg:mb-16 text-4xl font-semibold font-heading">Expand your brand</h2>
+                        <div class="flex items-start mb-10">
+                            <div class="mt-2 mr-4">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67 0H14.34C17.73 0 20 2.38 20 5.92V14.091C20 17.62 17.73 20 14.34 20H5.67C2.28 20 0 17.62 0 14.091V5.92C0 2.38 2.28 0 5.67 0ZM9.43 12.99L14.18 8.24C14.52 7.9 14.52 7.35 14.18 7C13.84 6.66 13.28 6.66 12.94 7L8.81 11.13L7.06 9.38C6.72 9.04 6.16 9.04 5.82 9.38C5.48 9.72 5.48 10.27 5.82 10.62L8.2 12.99C8.37 13.16 8.59 13.24 8.81 13.24C9.04 13.24 9.26 13.16 9.43 12.99Z"
+                                        fill="#45C1FF"></path>
+                                </svg>
+                            </div>
+                            <div class="max-w-sm">
+                                <h3 class="mb-6 text-2xl font-semibold font-heading">Quick problem-solving contact</h3>
+                                <p class="text-xl text-gray-500">Amet minim mollit non deserunt ullamco est sit aliqua
+                                    dolor do amet sint.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-10">
+                            <div class="mt-2 mr-4">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67 0H14.34C17.73 0 20 2.38 20 5.92V14.091C20 17.62 17.73 20 14.34 20H5.67C2.28 20 0 17.62 0 14.091V5.92C0 2.38 2.28 0 5.67 0ZM9.43 12.99L14.18 8.24C14.52 7.9 14.52 7.35 14.18 7C13.84 6.66 13.28 6.66 12.94 7L8.81 11.13L7.06 9.38C6.72 9.04 6.16 9.04 5.82 9.38C5.48 9.72 5.48 10.27 5.82 10.62L8.2 12.99C8.37 13.16 8.59 13.24 8.81 13.24C9.04 13.24 9.26 13.16 9.43 12.99Z"
+                                        fill="#45C1FF"></path>
+                                </svg>
+                            </div>
+                            <div class="max-w-sm">
+                                <h3 class="mb-6 text-2xl font-semibold font-heading">Making changes simple and easy</h3>
+                                <p class="text-xl text-gray-500">Amet minim mollit non deserunt ullamco est sit aliqua
+                                    dolor do amet sint.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mt-2 mr-4">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67 0H14.34C17.73 0 20 2.38 20 5.92V14.091C20 17.62 17.73 20 14.34 20H5.67C2.28 20 0 17.62 0 14.091V5.92C0 2.38 2.28 0 5.67 0ZM9.43 12.99L14.18 8.24C14.52 7.9 14.52 7.35 14.18 7C13.84 6.66 13.28 6.66 12.94 7L8.81 11.13L7.06 9.38C6.72 9.04 6.16 9.04 5.82 9.38C5.48 9.72 5.48 10.27 5.82 10.62L8.2 12.99C8.37 13.16 8.59 13.24 8.81 13.24C9.04 13.24 9.26 13.16 9.43 12.99Z"
+                                        fill="#45C1FF"></path>
+                                </svg>
+                            </div>
+                            <div class="max-w-sm">
+                                <h3 class="mb-6 text-2xl font-semibold font-heading">Exchangeable at any time</h3>
+                                <p class="text-xl text-gray-500">Amet minim mollit non deserunt ullamco est sit aliqua
+                                    dolor do amet sint.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 px-4">
+                    <img class="w-full h-96 lg:h-128 mx-auto mb-6 md:mb-0 rounded-xl object-cover"
+                        src="https://images.unsplash.com/photo-1544717305-996b815c338c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------VIEW---------->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-3 -mb-10 lg:-mb-20">
+                <div class="w-full md:w-1/2 px-3 mb-10 lg:mb-20">
+                    <div class="text-center max-w-md mx-auto">
+                        <span
+                            class="flex items-center justify-center w-16 h-16 mb-8 md:mb-12 mx-auto bg-yellow-300 rounded-full text-white">
+                            <svg width="18" height="21" viewBox="0 0 18 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.98457 19.606C8.98457 19.606 16.6566 17.283 16.6566 10.879C16.6566 4.474 16.9346 3.974 16.3196 3.358C15.7036 2.742 9.99057 0.75 8.98457 0.75C7.97857 0.75 2.26557 2.742 1.65057 3.358C1.03457 3.974 1.31257 4.474 1.31257 10.879C1.31257 17.283 8.98457 19.606 8.98457 19.606Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M6.38599 9.87463L8.27799 11.7696L12.176 7.86963" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <h3 class="mb-6 text-2xl font-semibold font-heading">Frequent authentication</h3>
+                        <p class="text-base text-gray-500">Take care to develop resources continually and integrity them
+                            with previous projects. More interesting writings for your customers.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-10 lg:mb-20">
+                    <div class="text-center max-w-md mx-auto">
+                        <span
+                            class="flex items-center justify-center w-16 h-16 mx-auto mb-8 md:mb-12 bg-blue-400 rounded-full">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10 0.750122C15.108 0.750122 19.25 4.89112 19.25 10.0001C19.25 15.1081 15.108 19.2501 10 19.2501C4.891 19.2501 0.75 15.1081 0.75 10.0001C0.75 4.89112 4.891 0.750122 10 0.750122Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M9.99512 6.20422V10.6232" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M9.995 13.7961H10.005" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <h3 class="mb-6 text-2xl font-semibold font-heading">List of regular users</h3>
+                        <p class="text-base text-gray-500">Take care to develop resources continually and integrity them
+                            with previous projects. More interesting writings for your customers.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-10 lg:mb-20">
+                    <div class="text-center max-w-md mx-auto">
+                        <span
+                            class="flex-shrink-0 flex items-center justify-center w-16 h-16 mb-8 md:mb-12 mx-auto bg-red-400 rounded-full text-white">
+                            <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.4235 7.4478V5.3008C13.4235 2.7878 11.3855 0.7498 8.87249 0.7498C6.35949 0.7388 4.31349 2.7668 4.30249 5.2808V5.3008V7.4478"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.6832 19.2496H5.04224C2.94824 19.2496 1.25024 17.5526 1.25024 15.4576V11.1686C1.25024 9.07359 2.94824 7.37659 5.04224 7.37659H12.6832C14.7772 7.37659 16.4752 9.07359 16.4752 11.1686V15.4576C16.4752 17.5526 14.7772 19.2496 12.6832 19.2496Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M8.86304 12.2028V14.4238" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <h3 class="mb-6 text-2xl font-semibold font-heading">Change of access</h3>
+                        <p class="text-base text-gray-500">Take care to develop resources continually and integrity them
+                            with previous projects. More interesting writings for your customers.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 px-3 mb-10 lg:mb-20">
+                    <div class="text-center max-w-md mx-auto">
+                        <span
+                            class="flex items-center justify-center w-16 h-16 mb-8 md:mb-12 mx-auto bg-orange-400 rounded-full text-white">
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.9026 6.8512L12.4593 10.4642C11.6198 11.1302 10.4387 11.1302 9.59919 10.4642L5.11841 6.8512"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.9089 19C18.9502 19.0084 21 16.5095 21 13.4384V6.57001C21 3.49883 18.9502 1 15.9089 1H6.09114C3.04979 1 1 3.49883 1 6.57001V13.4384C1 16.5095 3.04979 19.0084 6.09114 19H15.9089Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <h3 class="mb-6 text-2xl font-semibold font-heading">Weekly email updates</h3>
+                        <p class="text-base text-gray-500">Take care to develop resources continually and integrity them
+                            with previous projects. More interesting writings for your customers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
