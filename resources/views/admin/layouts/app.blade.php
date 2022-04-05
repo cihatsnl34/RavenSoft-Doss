@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
     <link rel="stylesheet" href="{{ asset('admin-files/js/plugins/datatables/dataTables.bootstrap4.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin-files/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('admin-files/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css') }}">
     <!-- Stylesheets -->
     <!-- Fonts and OneUI framework -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
     <link rel="stylesheet" id="css-main" href="{{ asset('admin-files/css/oneui.min.css') }}">
 
 </head>
@@ -29,7 +31,7 @@
 
     <!-- Main Container -->
     <main id="main-container">
-        
+
         @yield('content')
 
     </main>
@@ -37,42 +39,48 @@
 
     @include('admin.layouts.footer')
 
-  
 
-     <!-- Page JS Code -->
-     <script src="{{ asset('admin-files/js/oneui.core.min.js') }}"></script>
-     <script src="{{ asset('admin-files/js/oneui.app.min.js') }}"></script>
-     <!-- Page JS Plugins -->
-     <script src="{{ asset('admin-files/js/pages/be_tables_datatables.min.js') }}"></script>
-     <script src="{{ asset('admin-files/js/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-     <script src="{{ asset('admin-files/js/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
-     <script src="{{ asset('admin-files/js/plugins/datatables/buttons/dataTables.buttons.min.js') }}"></script>
-     <script src="{{ asset('admin-files/js/plugins/datatables/buttons/buttons.print.min.js') }}"></script>
-     <script src="{{ asset('admin-files/js/plugins/datatables/buttons/buttons.html5.min.js') }}"></script>
-     <script src="{{ asset('admin-files/js/plugins/datatables/buttons/buttons.flash.min.js') }}"></script>
-     <script src="{{ asset('admin-files/js/plugins/datatables/buttons/buttons.colVis.min.js') }}"></script>
+
+    <!-- Page JS Code -->
+    <script src="{{ asset('admin-files/js/oneui.core.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/oneui.app.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/pages/be_forms_wizard.min.js') }}"></script>
+    <!-- Page JS Plugins -->
+    <script src="{{ asset('admin-files/js/pages/be_tables_datatables.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/datatables/buttons/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/datatables/buttons/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/datatables/buttons/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/datatables/buttons/buttons.flash.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/datatables/buttons/buttons.colVis.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/jquery-bootstrap-wizard/bs4/jquery.bootstrap.wizard.min.js') }}">
+    </script>
+    <script src="{{ asset('admin-files/js/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('admin-files/js/plugins/jquery-validation/additional-methods.js') }}"></script>
+
     <script>
-        function startTime() {
-            const today = new Date();
-            let h = today.getHours();
-            let m = today.getMinutes();
-            let s = today.getSeconds();
-            let day = today.getDate()
-            let month = today.getMonth() + 1;
-            let year = today.getFullYear();
+    function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        let day = today.getDate()
+        let month = today.getMonth() + 1;
+        let year = today.getFullYear();
 
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('saat').innerHTML = h + ":" + m + ":" + s + " | " + day + "." + month + "." + year;
-            setTimeout(startTime, 1000);
-        }
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('saat').innerHTML = h + ":" + m + ":" + s + " | " + day + "." + month + "." + year;
+        setTimeout(startTime, 1000);
+    }
 
-        function checkTime(i) {
-            if (i < 10) {
-                i = "0" + i
-            }; // add zero in front of numbers < 10
-            return i;
-        }
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }; // add zero in front of numbers < 10
+        return i;
+    }
     </script>
 </body>
 

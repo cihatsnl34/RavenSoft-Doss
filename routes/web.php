@@ -50,34 +50,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::get('about/add', 'AboutController@create')->name('about_ad');
         Route::post('about/add', 'AboutController@store')->name('about_add');
 
-        
-
-        Route::get('about', function () {
-            return view('admin.About.about');
-        })->name('about');
-        Route::get('references', function () {
-            return view('admin.dashboard');
-        })->name('uyeler');
-        Route::get('resource', function () {
-            return view('admin.resource');
-        })->name('resource');
-        Route::get('teklifler', function () {
-            return view('admin.pages.teklifle');
-        })->name('teklifler');
-        Route::get('acik-arttirma', function () {
-            return view('admin.pages.acik-art');
-        })->name('acik-arttirma');
-        Route::get('kalanlar', function () {
-            return view('admin.pages.kalanlar');
-        })->name('kalanlar');
-        Route::get('kayitlar', function () {
-            return view('admin.pages.kayitlar');
-        })->name('kayitlar');
-        Route::get('ayarlar', function () {
-            return view('admin.pages.ayarlar');
-        })->name('ayarlar');
-        
-
     });
     Route::get('logout', 'Auth\AuthenticatedSessionController@destroy')->name('logout');
 });

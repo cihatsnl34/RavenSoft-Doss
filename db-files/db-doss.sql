@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 04 Nis 2022, 23:12:45
+-- Üretim Zamanı: 05 Nis 2022, 20:04:35
 -- Sunucu sürümü: 10.4.22-MariaDB
 -- PHP Sürümü: 7.4.27
 
@@ -29,6 +29,32 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `abouts` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `firstTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `firstText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `secondTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `thirdTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `thirdText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fourTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fourText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fiveTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fiveText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sixTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sixText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sevenTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `eightTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `eightText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nineTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nineText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tenTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tenText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `elevenTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `elevenText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `twelveTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `twelveText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `thirteenTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `thirteenText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fourteenTitle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fourteenText` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -99,7 +125,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (7, '2022_04_04_204902_create_resources_table', 2),
 (8, '2022_04_04_205306_resource', 2),
 (9, '2022_04_04_210017_create_references_table', 3),
-(10, '2022_04_04_210100_reference', 3);
+(10, '2022_04_04_210100_reference', 3),
+(11, '2022_04_05_150150_about', 4),
+(12, '2022_04_05_150420_create_abouts_table', 5),
+(13, '2022_04_05_150503_about', 5);
 
 -- --------------------------------------------------------
 
@@ -138,20 +167,6 @@ CREATE TABLE `personal_access_tokens` (
 --
 
 CREATE TABLE `references` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `CompanyName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `CompanyLogo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Tablo için tablo yapısı `resources`
---
-
-CREATE TABLE `resources` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `CompanyName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `CompanyLogo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -227,12 +242,6 @@ ALTER TABLE `references`
   ADD PRIMARY KEY (`id`);
 
 --
--- Tablo için indeksler `resources`
---
-ALTER TABLE `resources`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Tablo için indeksler `users`
 --
 ALTER TABLE `users`
@@ -265,7 +274,7 @@ ALTER TABLE `failed_jobs`
 -- Tablo için AUTO_INCREMENT değeri `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `personal_access_tokens`
@@ -277,12 +286,6 @@ ALTER TABLE `personal_access_tokens`
 -- Tablo için AUTO_INCREMENT değeri `references`
 --
 ALTER TABLE `references`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- Tablo için AUTO_INCREMENT değeri `resources`
---
-ALTER TABLE `resources`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --

@@ -183,18 +183,18 @@
                 <li class="nav-main-heading">İşlemler</li>
 
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.reference') }}">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.about') }}">
                         <i class="nav-main-link-icon si si-users"></i>
                         <span class="nav-main-link-name">About</span>
                     </a>
                     <ul class="nav-main-submenu">
                         <li class="nav-main-item">
-                            <a class="nav-main-link" href="{{ route('admin.reference') }}">
+                            <a class="nav-main-link" href="{{ route('admin.about') }}">
                                 <span class="nav-main-link-name">About list</span>
                             </a>
                         </li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link" href="{{ route('admin.reference_ad') }}">
+                            <a class="nav-main-link" href="{{ route('admin.about_ad') }}">
                                 <span class="nav-main-link-name">About add</span>
                             </a>
                         </li>
