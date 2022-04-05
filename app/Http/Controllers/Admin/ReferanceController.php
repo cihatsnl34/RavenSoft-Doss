@@ -47,7 +47,7 @@ class ReferanceController extends Controller
             'CompanyName' => $name,
             'CompanyLogo' => $fileName
         ]);
-        return Redirect::back();
+        return redirect()->route('admin.reference');
     }
 
     /**

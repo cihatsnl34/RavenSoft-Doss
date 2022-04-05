@@ -219,9 +219,27 @@
                     </ul>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link" href="{{ route('admin.dashboard') }}">
-                        <i class="nav-main-link-icon si si-energy"></i>
-                        <span class="nav-main-link-name">İletişim</span>
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.contact') }}">
+                        <i class="nav-main-link-icon si si-users"></i>
+                        <span class="nav-main-link-name">Contact</span>
+                    </a>
+                    <ul class="nav-main-submenu">
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{ route('admin.contact') }}">
+                                <span class="nav-main-link-name">Contact list</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{ route('admin.contact_ad') }}">
+                                <span class="nav-main-link-name">Contact add</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-main-item">
+                    <a class="nav-main-link nav-main-link" href="{{ route('admin.message') }}">
+                        <i class="nav-main-link-icon si si-logout"></i>
+                        <span class="nav-main-link-name">Message</span>
                     </a>
                 </li>
                 <li class="nav-main-item">

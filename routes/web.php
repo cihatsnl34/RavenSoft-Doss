@@ -16,15 +16,13 @@ use Illuminate\Support\Facades\Route;
 require __DIR__ . '/auth.php';
 
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
+Route::get('home', 'HomeController@index')->name('home');
+Route::get('about', 'HomeController@about')->name('about');
+Route::get('contact', 'HomeController@contact')->name('contact');
+Route::post('contactRequest', 'HomeController@contactRequest')->name('contactRequest');
 
 
-
-Route::get('/admin', function () {
-    return redirect('/admin/login');
-});
 
 
 //admin
@@ -49,6 +47,24 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::get('about', 'AboutController@index')->name('about');
         Route::get('about/add', 'AboutController@create')->name('about_ad');
         Route::post('about/add', 'AboutController@store')->name('about_add');
+        Route::get('about/edit/{id}', 'AboutController@edit')->name('about_edit');
+        Route::post('about/update/{id}', 'AboutController@update')->name('about_update');
+        Route::get('about/delete/{id}', 'AboutController@destroy')->name('about_destroy');
+
+        //Contact
+        Route::get('contact', 'ConcactController@index')->name('contact');
+        Route::get('contact/add', 'ConcactController@create')->name('contact_ad');
+        Route::post('contact/add', 'ConcactController@store')->name('contact_add');
+        Route::get('contact/edit/{id}', 'ConcactController@edit')->name('contact_edit');
+        Route::post('contact/update/{id}', 'ConcactController@update')->name('contact_update');
+        Route::get('contact/delete/{id}', 'ConcactController@destroy')->name('contact_destroy');
+
+        //Message
+        Route::get('message', 'MessageController@index')->name('message');
+        Route::get('message/delete/{id}', 'MessageController@destroy')->name('message_destroy');
+        Route::get('download/{id}', 'MessageController@download')->name('download');
+
+        
 
     });
     Route::get('logout', 'Auth\AuthenticatedSessionController@destroy')->name('logout');

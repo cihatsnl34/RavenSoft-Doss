@@ -16,11 +16,11 @@
                     <div class="w-1/2 xl:w-1/3">
                         <ul class="hidden xl:flex xl:justify-center xl:items-center">
                             <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
-                                    href="index.html">Anasayfa</a></li>
+                                href="{{route('home')}}">Anasayfa</a></li>
                             <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
-                                    href="hakkimizda.html">Hakkımızda</a></li>
+                                href="{{route('about')}}">Hakkımızda</a></li>
                             <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
-                                    href="iletisim.html">İletişim</a></li>
+                                    href="{{route('contact')}}">İletişim</a></li>
                             <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
                                     href="#">Karton Çanta</a></li>
                             <li class="mr-8"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium truncate"
@@ -51,11 +51,11 @@
                             </a>
                             <ul class="py-6">
                                 <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                                        href="index.html">Anasayfa</a></li>
+                                        href="{{route('home')}}">Anasayfa</a></li>
                                 <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                                        href="hakkimizda.html">Hakkımızda</a></li>
+                                        href="{{route('about')}}">Hakkımızda</a></li>
                                 <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
-                                        href="iletisim.html">İletişim</a></li>
+                                        href="{{route('contact')}}">İletişim</a></li>
                                 <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
                                         href="#">Karton Çanta</a></li>
                                 <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md"
