@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Reference;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class ReferanceController extends Controller
 {
@@ -15,7 +16,8 @@ class ReferanceController extends Controller
      */
     public function index()
     {
-       return view('admin.Reference.reference');
+       $reference = Reference::all();
+       return view('admin.Reference.reference', ['reference'=>$reference]);
     }
 
     /**
@@ -36,6 +38,11 @@ class ReferanceController extends Controller
      */
     public function store(Request $request)
     {
+        $reference = new Reference;
+ 
+        $reference->name = $request->name;
+ //resim gelecek
+        $reference->save();
         return Redirect::back();
     }
 
@@ -45,42 +52,23 @@ class ReferanceController extends Controller
      * @param  \App\Models\Reference  $reference
      * @return \Illuminate\Http\Response
      */
-    public function show(Reference $reference)
+    public function edit($id)
     {
-        //
+        $references = Reference::find($id);
+        return view('admin.About.about_edit', ['references' => $references]);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Reference  $reference
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Reference $reference)
+    public function update(Request $request,$id)
     {
-        //
+        $references = Reference::find($id);
+        $references->name = $request->name;
+        //resim gelecek
+        $references->save();
+        return redirect()->route('admin.reference');
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Reference  $reference
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Reference $reference)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Reference  $reference
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Reference $reference)
-    {
-        //
+        $references = Reference::find($id);
+        $references->delete();
+        return redirect()->route('admin.reference');
     }
 }

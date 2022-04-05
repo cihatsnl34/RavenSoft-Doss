@@ -218,15 +218,45 @@
                 <li class="nav-main-heading">İşlemler</li>
 
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link" href="{{ route('admin.dashboard') }}">
-                        <i class="nav-main-link-icon si si-energy"></i>
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.reference') }}">
+                        <i class="nav-main-link-icon si si-users"></i>
                         <span class="nav-main-link-name">About</span>
                     </a>
+                    <ul class="nav-main-submenu">
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{ route('admin.reference') }}">
+                                <span class="nav-main-link-name">About list</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{ route('admin.reference_ad') }}">
+                                <span class="nav-main-link-name">About add</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-main-item">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.reference') }}">
+                        <i class="nav-main-link-icon si si-users"></i>
+                        <span class="nav-main-link-name">References</span>
+                    </a>
+                    <ul class="nav-main-submenu">
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{ route('admin.reference') }}">
+                                <span class="nav-main-link-name">References list</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{ route('admin.reference_ad') }}">
+                                <span class="nav-main-link-name">References add</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-main-item">
                     <a class="nav-main-link nav-main-link" href="{{ route('admin.dashboard') }}">
-                        <i class="nav-main-link-icon si si-users"></i>
-                        <span class="nav-main-link-name">References</span>
+                        <i class="nav-main-link-icon si si-energy"></i>
+                        <span class="nav-main-link-name">İletişim</span>
                     </a>
                 </li>
                 <li class="nav-main-item">
@@ -235,6 +265,7 @@
                         <span class="nav-main-link-name">Çıkış Yap</span>
                     </a>
                 </li>
+               
             </ul>
         </div>
         <!-- END Side Navigation -->

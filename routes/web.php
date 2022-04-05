@@ -37,9 +37,21 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         
         Route::get('dashboard', 'HomeController@index')->name('dashboard');
+
+        //Reference
         Route::get('reference', 'ReferanceController@index')->name('reference');
-        Route::post('reference/add', 'ReferanceController@create')->name('reference_add');
-        Route::get('reference/add', 'ReferanceController@store')->name('reference_add');
+        Route::get('reference/add', 'ReferanceController@create')->name('reference_ad');
+        Route::post('reference/add', 'ReferanceController@store')->name('reference_add');
+        Route::get('reference/edit/{id}', 'ReferanceController@edit')->name('reference_edit');
+        Route::post('reference/update/{id}', 'ReferanceController@update')->name('reference_update');
+        Route::post('reference/delete/{id}', 'ReferanceController@destroy')->name('reference_destroy');
+        //About
+        Route::get('about', 'AboutController@index')->name('about');
+        Route::get('about/add', 'AboutController@create')->name('about_ad');
+        Route::post('about/add', 'AboutController@store')->name('about_add');
+
+        
+
         Route::get('about', function () {
             return view('admin.About.about');
         })->name('about');
