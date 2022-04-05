@@ -33,8 +33,9 @@
                         <div class="col-lg-8 col-xl-5 overflow-hidden">
                             <div class="form-group">
                                 <label class="d-block" for="example-file-input">Company Logo</label>
-                                <input value="{{ $references->CompanyLogo }}" type="file" id="example-file-input"
-                                    name="files">
+                                <img src="{{ asset('storage/company/' . $references->CompanyLogo) }}" alt="" width="150"
+                                    height="50">
+                                <input type="file" id="example-file-input" name="files">
                             </div>
                             <button type="submit" class="btn btn-rounded btn-secondary">Edit</button>
                         </div>

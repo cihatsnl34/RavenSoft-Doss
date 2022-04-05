@@ -63,13 +63,17 @@ class ReferanceController extends Controller
     }
     public function update(Request $request,$id)
     {
-        $fileName = $request->file('files')->getClientOriginalName();
-        $request->file('files')->storeAs('public/company',$fileName);
         $references = Reference::find($id);
-        $references->CompanyName = $request->CompanyName;
-        $references->CompanyLogo = $fileName;
-        $fileName = $request->file('files')->getClientOriginalName();
-        $request->file('files')->storeAs('public/company',$fileName);
+        $references->CompanyName = $request->name;
+        if($request->file('files') !== null)
+        {
+            unlink(storage_path('app/public/company/'.$references->CompanyLogo));
+            $fileName = $request->file('files')->getClientOriginalName();
+            $request->file('files')->storeAs('public/company',$fileName);
+            $references->CompanyLogo = $fileName;
+        }
+        
+        
         $references->save();
         return redirect()->route('admin.reference');
     }
