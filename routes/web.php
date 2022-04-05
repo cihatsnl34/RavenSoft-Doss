@@ -44,7 +44,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::post('reference/add', 'ReferanceController@store')->name('reference_add');
         Route::get('reference/edit/{id}', 'ReferanceController@edit')->name('reference_edit');
         Route::post('reference/update/{id}', 'ReferanceController@update')->name('reference_update');
-        Route::post('reference/delete/{id}', 'ReferanceController@destroy')->name('reference_destroy');
+        Route::get('reference/delete/{id}', 'ReferanceController@destroy')->name('reference_destroy');
         //About
         Route::get('about', 'AboutController@index')->name('about');
         Route::get('about/add', 'AboutController@create')->name('about_ad');

@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Reference;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class ReferanceController extends Controller
 {
@@ -38,11 +40,13 @@ class ReferanceController extends Controller
      */
     public function store(Request $request)
     {
-        $reference = new Reference;
- 
-        $reference->name = $request->name;
- //resim gelecek
-        $reference->save();
+        $fileName = $request->file('files')->getClientOriginalName();
+        $request->file('files')->storeAs('public/company',$fileName);
+        $name = $request->input('name');
+        Reference::insert([
+            'CompanyName' => $name,
+            'CompanyLogo' => $fileName
+        ]);
         return Redirect::back();
     }
 
@@ -55,13 +59,17 @@ class ReferanceController extends Controller
     public function edit($id)
     {
         $references = Reference::find($id);
-        return view('admin.About.reference_edit', ['references' => $references]);
+        return view('admin.Reference.reference_edit', ['references' => $references]);
     }
     public function update(Request $request,$id)
     {
+        $fileName = $request->file('files')->getClientOriginalName();
+        $request->file('files')->storeAs('public/company',$fileName);
         $references = Reference::find($id);
-        $references->name = $request->name;
-        //resim gelecek
+        $references->CompanyName = $request->CompanyName;
+        $references->CompanyLogo = $fileName;
+        $fileName = $request->file('files')->getClientOriginalName();
+        $request->file('files')->storeAs('public/company',$fileName);
         $references->save();
         return redirect()->route('admin.reference');
     }

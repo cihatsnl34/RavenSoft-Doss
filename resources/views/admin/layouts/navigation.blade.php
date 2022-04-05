@@ -158,42 +158,7 @@
 
             <!-- Options -->
             <div>
-                <!-- Color Variations -->
-                <div class="dropdown d-inline-block ml-3">
-                    <a class="text-dual font-size-sm" id="sidebar-themes-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
-                        <i class="si si-drop"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right font-size-sm smini-hide border-0" aria-labelledby="sidebar-themes-dropdown">
-                        <!-- Color Themes -->
-                        <!-- Layout API, functionality initialized in Template._uiHandleTheme() -->
-                        <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="default" href="#">
-                            <span>Varsayılan</span>
-                            <i class="fa fa-circle text-default"></i>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="{{ asset('admin-files/css/themes/amethyst.min.css') }}" href="#">
-                            <span>Amethyst</span>
-                            <i class="fa fa-circle text-amethyst"></i>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="{{ asset('admin-files/css/themes/city.min.css') }}" href="#">
-                            <span>City</span>
-                            <i class="fa fa-circle text-city"></i>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="{{ asset('admin-files/css/themes/flat.min.css') }}" href="#">
-                            <span>Flat</span>
-                            <i class="fa fa-circle text-flat"></i>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="{{ asset('admin-files/css/themes/modern.min.css') }}" href="#">
-                            <span>Modern</span>
-                            <i class="fa fa-circle text-modern"></i>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center justify-content-between" data-toggle="theme" data-theme="{{ asset('admin-files/css/themes/smooth.min.css') }}" href="#">
-                            <span>Smooth</span>
-                            <i class="fa fa-circle text-smooth"></i>
-                        </a>
-                        <!-- END Color Themes -->
-                    </div>
-                </div>
-                <!-- END Themes -->
+               
 
                 <!-- Close Sidebar, Visible only on mobile screens -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->

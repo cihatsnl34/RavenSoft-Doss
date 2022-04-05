@@ -6,12 +6,12 @@
                 <h3 class="block-title">References Add</h3>
             </div>
             <div class="block-content block-content-full">
-                <form action="{{route('admin.reference_add')}}" method="POST" enctype="multipart/form-data" onsubmit="return false;">
+                <form action="{{ route('admin.reference_add') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row push">
                         <div class="col-lg-4">
                             <p class="font-size-sm text-muted">
-                                
+
                             </p>
                         </div>
                         <div class="col-lg-8 col-xl-5">
@@ -21,8 +21,8 @@
                             </div>
                         </div>
                     </div>
-                   
-                  
+
+
                     <div class="row push">
                         <div class="col-lg-4">
                             <p class="font-size-sm text-muted">
@@ -33,12 +33,10 @@
                                 <label class="d-block" for="example-file-input">Company Logo</label>
                                 <input type="file" id="example-file-input" name="files">
                             </div>
-                            
-                        <button type="submit"  class="btn btn-rounded btn-secondary">Add</button>
-                            
+                            <button type="submit" class="btn btn-rounded btn-secondary">Add</button>
                         </div>
                     </div>
-                    
+
                 </form>
             </div>
         </div>

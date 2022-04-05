@@ -7,7 +7,7 @@
             </div>
             <div class="block-content block-content-full">
                 <form action="{{ route('admin.reference_update', ['id' => $references->id]) }}" method="POST"
-                    enctype="multipart/form-data" onsubmit="return false;">
+                    enctype="multipart/form-data">
                     @csrf
                     <div class="row push">
                         <div class="col-lg-4">
@@ -18,7 +18,8 @@
                         <div class="col-lg-8 col-xl-5">
                             <div class="form-group">
                                 <label for="example-text-input">Company Name</label>
-                                <input  value={{$references->name}} type="text" va class="form-control" id="example-text-input" name="name">
+                                <input value="{{ $references->CompanyName }}" type="text" va class="form-control"
+                                    id="example-text-input" name="name">
                             </div>
                         </div>
                     </div>
@@ -32,13 +33,12 @@
                         <div class="col-lg-8 col-xl-5 overflow-hidden">
                             <div class="form-group">
                                 <label class="d-block" for="example-file-input">Company Logo</label>
-                                <input type="file" id="example-file-input" name="files">
+                                <input value="{{ $references->CompanyLogo }}" type="file" id="example-file-input"
+                                    name="files">
                             </div>
-
-                            
-
+                            <button type="submit" class="btn btn-rounded btn-secondary">Edit</button>
                         </div>
-                        <button type="submit" class="btn btn-rounded btn-secondary">Edit</button>
+
                     </div>
 
                 </form>
