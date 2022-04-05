@@ -55,7 +55,7 @@ class ReferanceController extends Controller
     public function edit($id)
     {
         $references = Reference::find($id);
-        return view('admin.About.about_edit', ['references' => $references]);
+        return view('admin.About.reference_edit', ['references' => $references]);
     }
     public function update(Request $request,$id)
     {
