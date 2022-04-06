@@ -243,6 +243,24 @@
                     </a>
                 </li>
                 <li class="nav-main-item">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.reference') }}">
+                        <i class="nav-main-link-icon si si-users"></i>
+                        <span class="nav-main-link-name">Image</span>
+                    </a>
+                    <ul class="nav-main-submenu">
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{ route('admin.image') }}">
+                                <span class="nav-main-link-name">Image list</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{ route('admin.image_ad') }}">
+                                <span class="nav-main-link-name">Image add</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-main-item">
                     <a class="nav-main-link nav-main-link" href="{{ route('admin.logout') }}">
                         <i class="nav-main-link-icon si si-logout"></i>
                         <span class="nav-main-link-name">Çıkış Yap</span>

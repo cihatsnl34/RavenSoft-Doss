@@ -22,7 +22,7 @@
 <body>
     @include('_header')
     @yield('content')
-    @include('_footer')
+   
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{asset('assets')}}/js/script.js"></script>

@@ -70,7 +70,7 @@
                     </div>
                     <h3 class="mb-2 text-2xl md:text-3xl leading-9 text-coolGray-800 font-bold">Email</h3>
                     <a class="text-xl text-coolGray-500 hover:text-coolGray-600 font-medium"
-                        href="mailto:#">contact@flex.co</a>
+                        href="mailto:#">{{$contact->email}}</a>
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-4 mb-10 md:mb-0">
@@ -84,7 +84,7 @@
                         </svg>
                     </div>
                     <h3 class="mb-2 text-2xl md:text-3xl leading-9 text-coolGray-800 font-bold">Phone</h3>
-                    <p class="text-xl text-coolGray-500 font-medium">+7-843-672-431</p>
+                    <p class="text-xl text-coolGray-500 font-medium">{{$contact->phone}}</p>
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-4">
@@ -98,7 +98,7 @@
                         </svg>
                     </div>
                     <h3 class="mb-3 text-2xl md:text-3xl font-bold leading-9 text-coolGray-900">Socials</h3>
-                    <a class="inline-block mr-8 text-green-500 hover:text-green-600" href="#">
+                    <a class="inline-block mr-8 text-green-500 hover:text-green-600" href="{{$contact->facebookUrl}}">
                         <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -106,7 +106,7 @@
                                 fill="currentColor"></path>
                         </svg>
                     </a>
-                    <a class="inline-block mr-8 text-green-500 hover:text-green-600" href="#">
+                    <a class="inline-block mr-8 text-green-500 hover:text-green-600" href="{{$contact->twitterUrl}}">
                         <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -114,7 +114,7 @@
                                 fill="currentColor"></path>
                         </svg>
                     </a>
-                    <a class="inline-block mr-8 text-green-500 hover:text-green-600" href="#">
+                    <a class="inline-block mr-8 text-green-500 hover:text-green-600" href="{{$contact->instagramUrl}}">
                         <svg width="20" height="20" viewBox="0 0 24 22" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -128,7 +128,7 @@
                             </mask>
                         </svg>
                     </a>
-                    <a class="inline-block text-green-500 hover:text-green-600" href="#">
+                    <a class="inline-block text-green-500 hover:text-green-600" href="{{$contact->linkedinUrl}}">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -154,23 +154,23 @@
                     <div class="flex flex-wrap">
                         <div class="mb-12 w-full md:w-1/2 lg:w-1/2">
                             <h3 class="mb-2 text-3xl lg:text-4xl font-bold">Office</h3>
-                            <p class="text-gray-400">359 Hidden Valley</p>
-                            <p class="text-gray-400">Road, NY</p>
+                            <p class="text-gray-400">{{$contact->adress}}</p>
+                            
                         </div>
                         <div class="mb-12 w-full md:w-1/2">
                             <h3 class="mb-2 text-3xl lg:text-4xl font-bold">Contacts</h3>
-                            <p class="text-gray-400">hallo@gamil.com</p>
+                            <p class="text-gray-400">{{$contact->email}}</p>
                         </div>
                         <div class="w-full md:w-1/3 lg:w-full">
                             <h3 class="mb-2 text-3xl lg:text-4xl font-bold">Socials</h3>
                             <div class="flex">
-                                <a class="mr-3" href="#">
+                                <a class="mr-3" href="{{$contact->facebookUrl}}">
                                     <img src="atis-assets/social/facebook.svg" alt="">
                                 </a>
-                                <a class="mr-3" href="#">
+                                <a class="mr-3" href="{{$contact->twitterUrl}}">
                                     <img src="atis-assets/social/twitter.svg" alt="">
                                 </a>
-                                <a href="#">
+                                <a href="{{$contact->instagramUrl}}">
                                     <img src="atis-assets/social/instagram.svg" alt="">
                                 </a>
                             </div>

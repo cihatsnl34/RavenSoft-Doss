@@ -8,11 +8,8 @@
             <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
                 <div class="max-w-lg">
                     <span class="text-xs text-blue-400 font-semibold">What's new at Shuffle</span>
-                    <h2 class="mt-8 mb-6 lg:mb-10 lg:pr-8 text-4xl font-semibold font-heading">Expand your brand
-                        with this excellent extension tool</h2>
-                    <p class="mb-6 lg:mb-12 text-xl text-gray-500">With this tool, you will get much better results
-                        at work and develop new skills. Will you take the risk of trying the latest version of our
-                        application?</p>
+                    <h2 class="mt-8 mb-6 lg:mb-10 lg:pr-8 text-4xl font-semibold font-heading">{{$about->firstTitle}}</h2>
+                    <p class="mb-6 lg:mb-12 text-xl text-gray-500">{{$about->firstText}}</p>
                     <a class="inline-block py-4 px-8 text-sm text-white font-medium leading-normal border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition duration-200 rounded transition duration-200"
                         href="#">Try demo</a>
                 </div>
@@ -35,40 +32,35 @@
             </div>
             <div class="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
                 <div class="max-w-xl">
-                    <h2 class="mb-10 lg:mb-16 text-4xl font-semibold font-heading">Lorem ipsum dolor sit amet
-                        consectetur</h2>
+                    <h2 class="mb-10 lg:mb-16 text-4xl font-semibold font-heading">{{$about->secondTitle}}</h2>
                     <div class="relative flex flex-wrap -mx-4 -mb-12">
                         <div class="relative w-full lg:w-1/2 px-4 mb-12">
                             <img class="hidden lg:block absolute top-0 left-0 ml-24 -mt-10"
                                 src="https://shuffle.dev/zeus-assets/icons/line-little-top.svg" alt="">
                             <span
                                 class="flex items-center justify-center w-12 h-12 mb-6 lg:mb-8 rounded-full bg-blue-400 text-white text-sm">1</span>
-                            <h3 class="mb-4 text-2xl font-semibold font-heading">Dolor sit amet</h3>
-                            <p class="text-xl text-gray-500">Etiam pellentesque non nibh non pulvinar. Mauris
-                                posuere, tellus sit amet tempus vestibulum.</p>
+                            <h3 class="mb-4 text-2xl font-semibold font-heading">{{$about->thirdTitle}}</h3>
+                            <p class="text-xl text-gray-500">{{$about->thirdText}}</p>
                         </div>
                         <div class="w-full lg:w-1/2 px-4 mb-12">
                             <span
                                 class="flex items-center justify-center w-12 h-12 mb-6 lg:mb-8 rounded-full bg-red-400 text-white text-sm">2</span>
-                            <h3 class="mb-4 text-2xl font-semibold font-heading">Dolor sit amet</h3>
-                            <p class="text-xl text-gray-500">Etiam pellentesque non nibh non pulvinar. Mauris
-                                posuere, tellus sit amet tempus vestibulum.</p>
+                            <h3 class="mb-4 text-2xl font-semibold font-heading">{{$about->fourTitle}}</h3>
+                            <p class="text-xl text-gray-500">{{$about->fourText}}</p>
                         </div>
                         <div class="relative w-full lg:w-1/2 px-4 mb-12">
                             <img class="hidden lg:block absolute top-0 left-0 -mt-24 ml-24"
                                 src="https://shuffle.dev/zeus-assets/icons/line-little.svg" alt="">
                             <span
                                 class="flex items-center justify-center w-12 h-12 mb-6 lg:mb-8 rounded-full bg-yellow-400 text-white text-sm">3</span>
-                            <h3 class="mb-4 text-2xl font-semibold font-heading">Dolor sit amet</h3>
-                            <p class="text-xl text-gray-500">Etiam pellentesque non nibh non pulvinar. Mauris
-                                posuere, tellus sit amet tempus vestibulum.</p>
+                            <h3 class="mb-4 text-2xl font-semibold font-heading">{{$about->fiveTitle}}</h3>
+                            <p class="text-xl text-gray-500">{{$about->fiveText}}</p>
                         </div>
                         <div class="w-full lg:w-1/2 px-4 mb-12">
                             <span
                                 class="flex items-center justify-center w-12 h-12 mb-6 lg:mb-8 rounded-full bg-orange-400 text-white text-sm">4</span>
-                            <h3 class="mb-4 text-2xl font-semibold font-heading">Dolor sit amet</h3>
-                            <p class="text-xl text-gray-500">Etiam pellentesque non nibh non pulvinar. Mauris
-                                posuere, tellus sit amet tempus vestibulum.</p>
+                            <h3 class="mb-4 text-2xl font-semibold font-heading">{{$about->sixTitle}}</h3>
+                            <p class="text-xl text-gray-500">{{$about->sixText}}</p>
                         </div>
                     </div>
                 </div>
@@ -84,7 +76,7 @@
                 src="zeus-assets/icons/dots/red-dot-right-shield.svg" alt="">
             <div class="relative w-full lg:w-1/2 px-4 pb-12 lg:pb-0">
                 <div class="max-w-max">
-                    <h2 class="mb-10 lg:mb-16 text-4xl font-semibold font-heading">Expand your brand</h2>
+                    <h2 class="mb-10 lg:mb-16 text-4xl font-semibold font-heading">{{$about->sevenTitle}}</h2>
                     <div class="flex items-start mb-10">
                         <div class="mt-2 mr-4">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -95,9 +87,8 @@
                             </svg>
                         </div>
                         <div class="max-w-sm">
-                            <h3 class="mb-6 text-2xl font-semibold font-heading">Quick problem-solving contact</h3>
-                            <p class="text-xl text-gray-500">Amet minim mollit non deserunt ullamco est sit aliqua
-                                dolor do amet sint.</p>
+                            <h3 class="mb-6 text-2xl font-semibold font-heading">{{$about->eightTitle}}</h3>
+                            <p class="text-xl text-gray-500">{{$about->eightText}}</p>
                         </div>
                     </div>
                     <div class="flex items-start mb-10">
@@ -110,9 +101,8 @@
                             </svg>
                         </div>
                         <div class="max-w-sm">
-                            <h3 class="mb-6 text-2xl font-semibold font-heading">Making changes simple and easy</h3>
-                            <p class="text-xl text-gray-500">Amet minim mollit non deserunt ullamco est sit aliqua
-                                dolor do amet sint.</p>
+                            <h3 class="mb-6 text-2xl font-semibold font-heading">{{$about->nineTitle}}</h3>
+                            <p class="text-xl text-gray-500">{{$about->nineText}}</p>
                         </div>
                     </div>
                     <div class="flex items-start">
@@ -125,9 +115,8 @@
                             </svg>
                         </div>
                         <div class="max-w-sm">
-                            <h3 class="mb-6 text-2xl font-semibold font-heading">Exchangeable at any time</h3>
-                            <p class="text-xl text-gray-500">Amet minim mollit non deserunt ullamco est sit aliqua
-                                dolor do amet sint.</p>
+                            <h3 class="mb-6 text-2xl font-semibold font-heading">{{$about->tenTitle}}</h3>
+                            <p class="text-xl text-gray-500">{{$about->tenText}}</p>
                         </div>
                     </div>
                 </div>
@@ -158,9 +147,8 @@
                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </span>
-                    <h3 class="mb-6 text-2xl font-semibold font-heading">Frequent authentication</h3>
-                    <p class="text-base text-gray-500">Take care to develop resources continually and integrity them
-                        with previous projects. More interesting writings for your customers.</p>
+                    <h3 class="mb-6 text-2xl font-semibold font-heading">{{$about->elevenTitle}}</h3>
+                    <p class="text-base text-gray-500">{{$about->elevenText}}</p>
                 </div>
             </div>
             <div class="w-full md:w-1/2 px-3 mb-10 lg:mb-20">
@@ -179,9 +167,8 @@
                                 stroke-linejoin="round"></path>
                         </svg>
                     </span>
-                    <h3 class="mb-6 text-2xl font-semibold font-heading">List of regular users</h3>
-                    <p class="text-base text-gray-500">Take care to develop resources continually and integrity them
-                        with previous projects. More interesting writings for your customers.</p>
+                    <h3 class="mb-6 text-2xl font-semibold font-heading">{{$about->twelveTitle}}</h3>
+                    <p class="text-base text-gray-500">{{$about->twelveText}}</p>
                 </div>
             </div>
             <div class="w-full md:w-1/2 px-3 mb-10 lg:mb-20">
@@ -202,9 +189,8 @@
                                 stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </span>
-                    <h3 class="mb-6 text-2xl font-semibold font-heading">Change of access</h3>
-                    <p class="text-base text-gray-500">Take care to develop resources continually and integrity them
-                        with previous projects. More interesting writings for your customers.</p>
+                    <h3 class="mb-6 text-2xl font-semibold font-heading">{{$about->thirteenTitle}}</h3>
+                    <p class="text-base text-gray-500">{{$about->thirteenText}}</p>
                 </div>
             </div>
             <div class="w-full md:w-1/2 px-3 mb-10 lg:mb-20">
@@ -223,9 +209,8 @@
                                 stroke-linejoin="round"></path>
                         </svg>
                     </span>
-                    <h3 class="mb-6 text-2xl font-semibold font-heading">Weekly email updates</h3>
-                    <p class="text-base text-gray-500">Take care to develop resources continually and integrity them
-                        with previous projects. More interesting writings for your customers.</p>
+                    <h3 class="mb-6 text-2xl font-semibold font-heading">{{$about->fourteenTitle}}</h3>
+                    <p class="text-base text-gray-500">{{$about->fourteenText}}</p>
                 </div>
             </div>
         </div>

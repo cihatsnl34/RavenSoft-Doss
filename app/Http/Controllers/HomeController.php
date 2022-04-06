@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Concact;
+use App\Models\Image;
 use App\Models\Message;
+use App\Models\About;
+use App\Models\Reference;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,7 +18,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $references =Reference::all();
+        return view('home',['referance'=> $references]);
+    }
+    public function image()
+    {
+        $image =Image::first();
+        return view('home',['image'=> $image]);
     }
 
     /**
@@ -24,12 +34,15 @@ class HomeController extends Controller
      */
     public function about()
     {
-        return view('about');
+        $about=About::first();
+        return view('about',['about'=> $about]);
     }
     public function contact()
     {
-        return view('contact');
+        $contact =Concact::first();
+        return view('contact',['contact'=> $contact]);
     }
+
     public function contactRequest(Request $request)
     {
 

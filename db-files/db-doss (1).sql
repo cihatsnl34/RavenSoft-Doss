@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 05 Nis 2022, 20:04:35
+-- Üretim Zamanı: 06 Nis 2022, 13:24:33
 -- Sunucu sürümü: 10.4.22-MariaDB
 -- PHP Sürümü: 7.4.27
 
@@ -59,6 +59,13 @@ CREATE TABLE `abouts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Tablo döküm verisi `abouts`
+--
+
+INSERT INTO `abouts` (`id`, `firstTitle`, `firstText`, `secondTitle`, `thirdTitle`, `thirdText`, `fourTitle`, `fourText`, `fiveTitle`, `fiveText`, `sixTitle`, `sixText`, `sevenTitle`, `eightTitle`, `eightText`, `nineTitle`, `nineText`, `tenTitle`, `tenText`, `elevenTitle`, `elevenText`, `twelveTitle`, `twelveText`, `thirteenTitle`, `thirteenText`, `fourteenTitle`, `fourteenText`, `created_at`, `updated_at`) VALUES
+(2, '1 Başlık', '1 Başlık', '2 Başlık', '3 Başlık', '3 Başlık', '4 Başlık', '4 Başlık', '5 Başlık', '5 Başlık', '6 Başlık', '6 Başlık', '7 Başlık', '8 Başlık', '8 Başlık', '9 Başlık', '9 Başlık', '10 Başlık', '10 Başlık', '11 Başlık', '11 Başlık', '12 Başlık', '12 Başlık', '13 Başlık', '13 Başlık', '14 Başlık', '14 Başlık', '2022-04-05 19:56:11', '2022-04-05 19:56:11');
+
 -- --------------------------------------------------------
 
 --
@@ -86,6 +93,33 @@ INSERT INTO `admins` (`id`, `name`, `email`, `email_verified_at`, `password`, `r
 -- --------------------------------------------------------
 
 --
+-- Tablo için tablo yapısı `concacts`
+--
+
+CREATE TABLE `concacts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `facebookUrl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitterUrl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `instagramUrl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedinUrl` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `adress` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Tablo döküm verisi `concacts`
+--
+
+INSERT INTO `concacts` (`id`, `email`, `phone`, `facebookUrl`, `twitterUrl`, `instagramUrl`, `linkedinUrl`, `adress`, `created_at`, `updated_at`) VALUES
+(2, 'paybull32@paybull.com', '23123211', 'www.google.com/', 'asd', 'asd', 'asd', 'asdasdasdasd', '2022-04-05 16:30:30', '2022-04-05 16:36:15'),
+(3, 'deneme@deneme.com', '11111', 'asd', 'asd', 'ads', 'asd', 'asdasd213', '2022-04-05 16:37:15', '2022-04-05 16:37:32');
+
+-- --------------------------------------------------------
+
+--
 -- Tablo için tablo yapısı `failed_jobs`
 --
 
@@ -98,6 +132,54 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `images`
+--
+
+CREATE TABLE `images` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Tablo döküm verisi `images`
+--
+
+INSERT INTO `images` (`id`, `name`, `file`, `created_at`, `updated_at`) VALUES
+(3, 'deneme', 'opet.svg', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `department` tinyint(1) NOT NULL,
+  `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Tablo döküm verisi `messages`
+--
+
+INSERT INTO `messages` (`id`, `department`, `subject`, `name`, `email`, `message`, `file`, `created_at`, `updated_at`) VALUES
+(2, 1, 'cihat', 'test', 'user@user.com', 'asdasd', '1640930333985.jpg', '2022-04-05 17:30:44', '2022-04-05 17:30:44'),
+(3, 1, 'cihat', 'test', 'user@user.com', 'asdasd', '1640930333985.jpg', '2022-04-05 18:44:43', '2022-04-05 18:44:43'),
+(4, 0, 'dsf', 'sdfsdfsdf', 'sdfsdfsdf@gmail.com', 'sdefsdf', 'CihatSenelCv.pdf', '2022-04-05 18:45:13', '2022-04-05 18:45:13');
 
 -- --------------------------------------------------------
 
@@ -128,7 +210,13 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '2022_04_04_210100_reference', 3),
 (11, '2022_04_05_150150_about', 4),
 (12, '2022_04_05_150420_create_abouts_table', 5),
-(13, '2022_04_05_150503_about', 5);
+(13, '2022_04_05_150503_about', 5),
+(14, '2022_04_05_185002_create_concacts_table', 6),
+(15, '2022_04_05_185028_create_messages_table', 6),
+(16, '2022_04_05_185648_concact', 6),
+(17, '2022_04_05_185709_message', 6),
+(18, '2022_04_05_232434_create_images_table', 7),
+(19, '2022_04_05_232727_image', 7);
 
 -- --------------------------------------------------------
 
@@ -174,6 +262,17 @@ CREATE TABLE `references` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Tablo döküm verisi `references`
+--
+
+INSERT INTO `references` (`id`, `CompanyName`, `CompanyLogo`, `created_at`, `updated_at`) VALUES
+(2, 'logo', 'akbank.svg', NULL, NULL),
+(3, 'deneme', 'esenler.svg', NULL, NULL),
+(4, 'deneme2', 'meb.svg', NULL, NULL),
+(5, 'deneme', 'akbank.svg', NULL, NULL),
+(6, 'denem', 'logo.svg', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -209,11 +308,30 @@ ALTER TABLE `admins`
   ADD UNIQUE KEY `admins_email_unique` (`email`);
 
 --
+-- Tablo için indeksler `concacts`
+--
+ALTER TABLE `concacts`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `concacts_email_unique` (`email`);
+
+--
 -- Tablo için indeksler `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Tablo için indeksler `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Tablo için indeksler `migrations`
@@ -256,7 +374,7 @@ ALTER TABLE `users`
 -- Tablo için AUTO_INCREMENT değeri `abouts`
 --
 ALTER TABLE `abouts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `admins`
@@ -265,16 +383,34 @@ ALTER TABLE `admins`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- Tablo için AUTO_INCREMENT değeri `concacts`
+--
+ALTER TABLE `concacts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- Tablo için AUTO_INCREMENT değeri `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- Tablo için AUTO_INCREMENT değeri `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- Tablo için AUTO_INCREMENT değeri `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `personal_access_tokens`
@@ -286,7 +422,7 @@ ALTER TABLE `personal_access_tokens`
 -- Tablo için AUTO_INCREMENT değeri `references`
 --
 ALTER TABLE `references`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `users`

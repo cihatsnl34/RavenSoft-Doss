@@ -2,8 +2,8 @@
 
 
 @section("content")
-   <!-----SLIDER-------->
-   <div class="swiper w-full h-max">
+<!-----SLIDER-------->
+<div class="swiper w-full h-max">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="container px-4 mx-auto pt-10">
@@ -94,39 +94,17 @@
         <div class="flex flex-col justify-center items-center">
             <h2 class="mb-8 text-3xl md:text-4xl leading-tight text-coolGray-900 font-bold tracking-tighter">Tercih
                 eden müşteriler</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris </h4>
+
         </div>
         <div class="flex flex-wrap -mx-4 justify-between mt-20">
+            @foreach($referance as $rf)
             <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
                 <div class="py-12 px-2 rounded-md shadow-2xl">
-                    <img class="mx-auto h-6" src="./assets/akbank.svg" alt="">
+                    <img class="mx-auto h-6" src="{{asset('storage/company/'.$rf->CompanyLogo)}}" alt="{{$rf->CompanyName}}">
                 </div>
             </div>
-            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
-                <div class="py-12 px-2 rounded-md shadow-2xl">
-                    <img class="mx-auto h-6" src="./assets/opet.svg" alt="">
-                </div>
-            </div>
-            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 md:mb-0">
-                <div class="py-12 px-2 rounded-md shadow-2xl">
-                    <img class="mx-auto h-6" src="./assets/akbank.svg" alt="">
-                </div>
-            </div>
-            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 md:mb-0">
-                <div class="py-12 px-2 rounded-md shadow-2xl">
-                    <img class="mx-auto h-6" src="./assets/opet.svg" alt="">
-                </div>
-            </div>
-            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4">
-                <div class="py-12 px-2 rounded-md shadow-2xl">
-                    <img class="mx-auto h-6" src="./assets/akbank.svg" alt="">
-                </div>
-            </div>
-            <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
-                <div class="py-12 px-2 rounded-md shadow-2xl">
-                    <img class="mx-auto h-6" src="./assets/opet.svg" alt="">
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </section>
@@ -140,7 +118,7 @@
             <h4 class="pb-20 text-center text-gray-500 ">Pellentesque vehicula fermentum turpis eu cursus.<br> Cras
                 convallis tellus et elit aliquet, vitae dignissim ligula sodales. </h4>
             <img src="./assets/text.svg" class="absolute top-13 left-18 z-0" />
-            <img src="./assets/canta.png" class="z-20 my-12" />
+            <img src="{{asset('storage/image/'.$image->file)}}" class="z-20 my-12" />
 
         </div>
 
@@ -185,5 +163,5 @@
         </div>
     </div>
 </section>
-
+@include('_footer')
 @endsection

@@ -30,7 +30,7 @@ class ReferanceController extends Controller
     public function create()
     {
         return view('admin.Reference.reference_add');
-    }
+    } 
 
     /**
      * Store a newly created resource in storage.

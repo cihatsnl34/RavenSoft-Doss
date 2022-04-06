@@ -20,6 +20,7 @@ Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('about', 'HomeController@about')->name('about');
 Route::get('contact', 'HomeController@contact')->name('contact');
+Route::get('image', 'HomeController@image')->name('image');
 Route::post('contactRequest', 'HomeController@contactRequest')->name('contactRequest');
 
 
@@ -63,7 +64,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::get('message', 'MessageController@index')->name('message');
         Route::get('message/delete/{id}', 'MessageController@destroy')->name('message_destroy');
         Route::get('download/{id}', 'MessageController@download')->name('download');
-
+        //Image
+        Route::get('image', 'ImageController@index')->name('image');
+        Route::get('image/add', 'ImageController@create')->name('image_ad');
+        Route::post('image/add', 'ImageController@store')->name('image_add');
+        Route::get('image/edit/{id}', 'ImageController@edit')->name('image_edit');
+        Route::post('image/update/{id}', 'ImageController@update')->name('image_update');
+        Route::get('image/delete/{id}', 'ImageController@destroy')->name('image_destroy');
         
 
     });
