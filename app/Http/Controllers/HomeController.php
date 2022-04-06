@@ -19,14 +19,10 @@ class HomeController extends Controller
     public function index()
     {
         $references =Reference::all();
-        return view('home',['referance'=> $references]);
-    }
-    public function image()
-    {
         $image =Image::first();
-        return view('home',['image'=> $image]);
+        return view('home',['referance'=> $references,'image'=> $image]);
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *

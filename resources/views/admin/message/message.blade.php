@@ -36,11 +36,10 @@
                                 <td>
                                     <div class="btn-group">
 
-                                        <button type="button" class="btn btn-sm btn-light" data-toggle="tooltip"
-                                            title="Remove Client">
+                                       
                                             <a href="{{ route('admin.download', ['id' => $rs->id]) }}">
-                                                <i class="fa fa-fw fa-times"></i>
-                                        </button>
+                                                <img class="" height=30px src="{{ asset('assets')}}/download.png">
+                                        
                                         </a>
                                     </div>
                                 </td>

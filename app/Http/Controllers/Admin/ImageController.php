@@ -46,7 +46,7 @@ class ImageController extends Controller
         }
         
         
-        $references->save();
+        $imagedata->save();
         return redirect()->route('admin.image');
     }
     public function destroy($id)
