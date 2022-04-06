@@ -36,8 +36,9 @@
                                             title="Remove Client">
                                              <a href="{{ route('admin.reference_destroy',['id' =>$rs->id]) }}" onclick="return confirm('Delete ! Are you sure ?')">
                                             <i class="fa fa-fw fa-times"></i>
-                                        </button>
                                         </a> 
+                                        </button>
+                                        
                                     </div>
                                 </td>
                             </tr>
