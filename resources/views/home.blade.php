@@ -100,7 +100,7 @@
             @foreach($referance as $rf)
             <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-4 mb-6 lg:mb-0">
                 <div class="py-12 px-2 rounded-md shadow-2xl">
-                    <img class="mx-auto h-6" src="{{asset('storage/company/'.$rf->CompanyLogo)}}" alt="{{$rf->CompanyName}}">
+                    <img class="mx-auto" src="{{asset('storage/company/'.$rf->CompanyLogo)}}" alt="{{$rf->CompanyName}}">
                 </div>
             </div>
             @endforeach
