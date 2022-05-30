@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Raven-Soft') }}</title>
-
+    <link rel="icon" href="{{ asset('admin-files/icon/1640930333985.jpg') }}" type="image/x-icon">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -60,27 +60,27 @@
     <script src="{{ asset('admin-files/js/plugins/jquery-validation/additional-methods.js') }}"></script>
 
     <script>
-    function startTime() {
-        const today = new Date();
-        let h = today.getHours();
-        let m = today.getMinutes();
-        let s = today.getSeconds();
-        let day = today.getDate()
-        let month = today.getMonth() + 1;
-        let year = today.getFullYear();
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            let day = today.getDate()
+            let month = today.getMonth() + 1;
+            let year = today.getFullYear();
 
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('saat').innerHTML = h + ":" + m + ":" + s + " | " + day + "." + month + "." + year;
-        setTimeout(startTime, 1000);
-    }
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('saat').innerHTML = h + ":" + m + ":" + s + " | " + day + "." + month + "." + year;
+            setTimeout(startTime, 1000);
+        }
 
-    function checkTime(i) {
-        if (i < 10) {
-            i = "0" + i
-        }; // add zero in front of numbers < 10
-        return i;
-    }
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
     </script>
 </body>
 

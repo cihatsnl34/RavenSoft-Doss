@@ -6,19 +6,21 @@
         <div class="content-header border-bottom">
             <!-- User Avatar -->
             <a class="img-link mr-1" href="javascript:void(0)">
-                <img class="img-avatar img-avatar32" src="{{ asset('admin-files/media/avatars/avatar10.jpg') }}" alt="">
+                <img class="img-avatar img-avatar32" src="{{ asset('admin-files/media/avatars/avatar10.jpg') }}"
+                    alt="">
             </a>
             <!-- END User Avatar -->
 
             <!-- User Info -->
             <div class="ml-2">
-                <a class="link-fx text-dark font-w600" href="javascript:void(0)">{{session('username')}}</a>
+                <a class="link-fx text-dark font-w600" href="javascript:void(0)">{{ session('username') }}</a>
             </div>
             <!-- END User Info -->
 
             <!-- Close Side Overlay -->
             <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-            <a class="ml-auto btn btn-sm btn-dual" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
+            <a class="ml-auto btn btn-sm btn-dual" href="javascript:void(0)" data-toggle="layout"
+                data-action="side_overlay_close">
                 <i class="fa fa-fw fa-times text-danger"></i>
             </a>
             <!-- END Close Side Overlay -->
@@ -44,10 +46,12 @@
                             <div class="block-header block-header-default">
                                 <h3 class="block-title">Burasi Gelecek ..</h3>
                                 <div class="block-options">
-                                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                                    <button type="button" class="btn-block-option" data-toggle="block-option"
+                                        data-action="state_toggle" data-action-mode="demo">
                                         <i class="si si-refresh"></i>
                                     </button>
-                                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
+                                    <button type="button" class="btn-block-option" data-toggle="block-option"
+                                        data-action="content_toggle"></button>
                                 </div>
                             </div>
 
@@ -75,14 +79,16 @@
                             <div class="block-header block-header-default">
                                 <h3 class="block-title">Burasi Gelecek ..</h3>
                                 <div class="block-options">
-                                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                                    <button type="button" class="btn-block-option" data-toggle="block-option"
+                                        data-action="state_toggle" data-action-mode="demo">
                                         <i class="si si-refresh"></i>
                                     </button>
-                                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
+                                    <button type="button" class="btn-block-option" data-toggle="block-option"
+                                        data-action="content_toggle"></button>
                                 </div>
                             </div>
                             <div class="block-content">
-                                <!-- 
+                                <!--
                                 <ul class="nav-items mb-0">
                                     <li>
                                         <a class="media py-2" href="javascript:void(0)">
@@ -107,7 +113,8 @@
                             <div class="block-header block-header-default">
                                 <h3 class="block-title">Burasi Gelecek ..</h3>
                                 <div class="block-options">
-                                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
+                                    <button type="button" class="btn-block-option" data-toggle="block-option"
+                                        data-action="content_toggle"></button>
                                 </div>
                             </div>
                             <div class="block-content">
@@ -148,21 +155,23 @@
         <!-- Side Header -->
         <div class="content-header bg-white-5">
             <!-- Logo -->
-            <a class="font-w600 text-dual" href="index.html">
+            <a class="font-w600 text-dual" href="{{ route('admin.dashboard') }}">
 
                 <span class="smini-hide">
-                    <span class="font-w700 font-size-h5">RavenSoft |</span> <span class="font-w400">{{session('username')}}</span>
+                    <span class="font-w700 font-size-h5">RavenSoft |</span> <span
+                        class="font-w400">{{ session('username') }}</span>
                 </span>
             </a>
             <!-- END Logo -->
 
             <!-- Options -->
             <div>
-               
+
 
                 <!-- Close Sidebar, Visible only on mobile screens -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <a class="d-lg-none text-dual ml-3" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
+                <a class="d-lg-none text-dual ml-3" data-toggle="layout" data-action="sidebar_close"
+                    href="javascript:void(0)">
                     <i class="fa fa-times"></i>
                 </a>
                 <!-- END Close Sidebar -->
@@ -183,7 +192,8 @@
                 <li class="nav-main-heading">İşlemler</li>
 
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.about') }}">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
+                        aria-expanded="false" href="{{ route('admin.about') }}">
                         <i class="nav-main-link-icon si si-users"></i>
                         <span class="nav-main-link-name">About</span>
                     </a>
@@ -201,7 +211,8 @@
                     </ul>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.reference') }}">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
+                        aria-expanded="false" href="{{ route('admin.reference') }}">
                         <i class="nav-main-link-icon si si-users"></i>
                         <span class="nav-main-link-name">References</span>
                     </a>
@@ -219,7 +230,8 @@
                     </ul>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.contact') }}">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
+                        aria-expanded="false" href="{{ route('admin.contact') }}">
                         <i class="nav-main-link-icon si si-users"></i>
                         <span class="nav-main-link-name">Contact</span>
                     </a>
@@ -243,7 +255,8 @@
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="{{ route('admin.reference') }}">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
+                        aria-expanded="false" href="{{ route('admin.reference') }}">
                         <i class="nav-main-link-icon si si-users"></i>
                         <span class="nav-main-link-name">Image</span>
                     </a>
@@ -266,7 +279,7 @@
                         <span class="nav-main-link-name">Çıkış Yap</span>
                     </a>
                 </li>
-               
+
             </ul>
         </div>
         <!-- END Side Navigation -->
@@ -281,26 +294,26 @@
             <div class="d-flex align-items-center">
                 <!-- Toggle Sidebar -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
-                <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+                <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout"
+                    data-action="sidebar_toggle">
                     <i class="fa fa-fw fa-bars"></i>
                 </button>
                 <!-- END Toggle Sidebar -->
 
                 <!-- Toggle Mini Sidebar -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
-                <button type="button" class="btn btn-sm btn-dual mr-2 d-none d-lg-inline-block" data-toggle="layout" data-action="sidebar_mini_toggle">
+                <button type="button" class="btn btn-sm btn-dual mr-2 d-none d-lg-inline-block" data-toggle="layout"
+                    data-action="sidebar_mini_toggle">
                     <i class="fa fa-fw fa-ellipsis-v"></i>
                 </button>
                 <!-- END Toggle Mini Sidebar -->
 
                 <!-- Apps Modal -->
                 <!-- Opens the Apps modal found at the bottom of the page, after footer’s markup -->
-                <button type="button" class="btn btn-sm btn-dual mr-2" data-toggle="modal" data-target="#one-modal-apps">
-                    <i class="si si-grid"></i>
-                </button>
+
                 <!-- END Apps Modal -->
 
-                <!-- 
+                <!--
                 <button type="button" class="btn btn-sm btn-dual d-sm-none" data-toggle="layout" data-action="header_search_on">
                     <i class="si si-magnifier"></i>
                 </button>
@@ -324,32 +337,26 @@
             <div class="d-flex align-items-center">
                 <!-- User Dropdown -->
                 <div class="dropdown d-inline-block ml-2">
-                    <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded" src="{{ asset('admin-files/media/avatars/avatar10.jpg') }}" alt="Header Avatar" style="width: 18px;">
-                        <span class="d-none d-sm-inline-block ml-1">{{session('username')}}</span>
+                    <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rounded" src="{{ asset('admin-files/media/avatars/avatar10.jpg') }}"
+                            alt="Header Avatar" style="width: 18px;">
+                        <span class="d-none d-sm-inline-block ml-1">{{ session('username') }}</span>
                         <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block"></i>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-user-dropdown">
+                    <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm"
+                        aria-labelledby="page-header-user-dropdown">
                         <div class="p-3 text-center bg-primary">
-                            <img class="img-avatar img-avatar48 img-avatar-thumb" src="{{ asset('admin-files/media/avatars/avatar10.jpg') }}" alt="">
+                            <img class="img-avatar img-avatar48 img-avatar-thumb"
+                                src="{{ asset('admin-files/media/avatars/avatar10.jpg') }}" alt="">
                         </div>
                         <div class="p-2">
-                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="be_pages_generic_inbox.html">
-                                <span>Gelen Mesaj</span>
-                                <span>
-                                    <span class="badge badge-pill badge-primary">3</span>
-                                    <i class="si si-envelope-open ml-1"></i>
-                                </span>
-                            </a>
-                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="be_pages_generic_profile.html">
-                                <span>Profilim</span>
-                                <span>
-                                    <i class="si si-user ml-1"></i>
-                                </span>
-                            </a>
+
+
                             <div role="separator" class="dropdown-divider"></div>
                             <h5 class="dropdown-header text-uppercase">İşlemler</h5>
-                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{ route('admin.logout') }}">
+                            <a class="dropdown-item d-flex align-items-center justify-content-between"
+                                href="{{ route('admin.logout') }}">
                                 <span>Çıkış Yap</span>
                                 <i class="si si-logout ml-1"></i>
                             </a>
@@ -358,112 +365,11 @@
                 </div>
                 <!-- END User Dropdown -->
 
-                <!-- Notifications Dropdown -->
-                <div class="dropdown d-inline-block ml-2">
-                    <button type="button" class="btn btn-sm btn-dual" id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="si si-bell"></i>
-                        <span class="badge badge-danger badge-pill">6</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-notifications-dropdown">
-                        <div class="p-2 bg-primary text-center">
-                            <h5 class="dropdown-header text-capitalize text-white">Bildirimler</h5>
-                        </div>
-                        <ul class="nav-items mb-0">
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mr-2 ml-3">
-                                        <i class="fa fa-fw fa-check-circle text-success"></i>
-                                    </div>
-                                    <div class="media-body pr-2">
-                                        <div class="font-w600">burası gelecek...</div>
-                                        <small class="text-muted">15 dakika önce</small>
-                                    </div>
-                                </a>
-                            </li>
 
-                            <!--
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mr-2 ml-3">
-                                        <i class="fa fa-fw fa-check-circle text-success"></i>
-                                    </div>
-                                    <div class="media-body pr-2">
-                                        <div class="font-w600">You have a new follower</div>
-                                        <small class="text-muted">15 min ago</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mr-2 ml-3">
-                                        <i class="fa fa-fw fa-plus-circle text-info"></i>
-                                    </div>
-                                    <div class="media-body pr-2">
-                                        <div class="font-w600">1 new sale, keep it up</div>
-                                        <small class="text-muted">22 min ago</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mr-2 ml-3">
-                                        <i class="fa fa-fw fa-times-circle text-danger"></i>
-                                    </div>
-                                    <div class="media-body pr-2">
-                                        <div class="font-w600">Update failed, restart server</div>
-                                        <small class="text-muted">26 min ago</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mr-2 ml-3">
-                                        <i class="fa fa-fw fa-plus-circle text-info"></i>
-                                    </div>
-                                    <div class="media-body pr-2">
-                                        <div class="font-w600">2 new sales, keep it up</div>
-                                        <small class="text-muted">33 min ago</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mr-2 ml-3">
-                                        <i class="fa fa-fw fa-user-plus text-success"></i>
-                                    </div>
-                                    <div class="media-body pr-2">
-                                        <div class="font-w600">You have a new subscriber</div>
-                                        <small class="text-muted">41 min ago</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mr-2 ml-3">
-                                        <i class="fa fa-fw fa-check-circle text-success"></i>
-                                    </div>
-                                    <div class="media-body pr-2">
-                                        <div class="font-w600">You have a new follower</div>
-                                        <small class="text-muted">42 min ago</small>
-                                    </div>
-                                </a>
-                            </li>
-                            -->
-                        </ul>
-                        <div class="p-2 border-top">
-                            <a class="btn btn-sm btn-light btn-block text-center" href="javascript:void(0)">
-                                <i class="fa fa-fw fa-arrow-down mr-1"></i> Daha Fazla..
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END Notifications Dropdown -->
 
                 <!-- Toggle Side Overlay -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <button type="button" class="btn btn-sm btn-dual ml-2" data-toggle="layout" data-action="side_overlay_toggle">
-                    <i class="fa fa-fw fa-list-ul fa-flip-horizontal"></i>
-                </button>
+
                 <!-- END Toggle Side Overlay -->
             </div>
             <!-- END Right Section -->
@@ -477,11 +383,13 @@
                     <div class="input-group input-group-sm">
                         <div class="input-group-prepend">
                             <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                            <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
+                            <button type="button" class="btn btn-danger" data-toggle="layout"
+                                data-action="header_search_off">
                                 <i class="fa fa-fw fa-times-circle"></i>
                             </button>
                         </div>
-                        <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                        <input type="text" class="form-control" placeholder="Search or hit ESC.."
+                            id="page-header-search-input" name="page-header-search-input">
                     </div>
                 </form>
             </div>

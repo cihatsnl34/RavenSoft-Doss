@@ -8,7 +8,6 @@ use App\Models\Message;
 use App\Models\About;
 use App\Models\Reference;
 use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     /**
